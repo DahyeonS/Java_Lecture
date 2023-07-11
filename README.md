@@ -18,3 +18,7 @@
 * ScannerTest2.java
 
 * ScannerTest3.java
+
+* IfTest.java
+
+* IfTest2.java
