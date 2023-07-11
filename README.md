@@ -22,3 +22,7 @@
 * IfTest.java
 
 * IfTest2.java
+
+* ScoreTest.java
+
+* ScoreTest2.java
