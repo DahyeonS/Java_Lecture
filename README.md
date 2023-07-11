@@ -26,3 +26,7 @@
 * ScoreTest.java
 
 * ScoreTest2.java
+
+* RandomTest.java
+
+* LeapYearTest.java
