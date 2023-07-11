@@ -40,7 +40,6 @@ public class VariableTest {
 		System.out.println(year);
 		System.out.println(age);
 		
-		
 	}
 
 }
