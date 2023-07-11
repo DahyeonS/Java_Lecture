@@ -12,3 +12,7 @@
 * VariableTest.java
 
 ## 2023.7.11
+
+* ScannerTest.java
+
+* ScannerTest2.java
