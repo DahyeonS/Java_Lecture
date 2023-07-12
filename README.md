@@ -45,4 +45,6 @@
 
 * DiceTest.java
 
-* DiceTest.java
+* DiceTest2.java
+
+* DiceTest3.java
