@@ -50,3 +50,5 @@
 * DiceTest3.java
 
 * PrefectNum.java
+
+* PrefectNum2.java
