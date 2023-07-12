@@ -40,3 +40,5 @@
 * SwitchTest2.java
 
 * ForTest.java
+
+* ArrayTest.java
