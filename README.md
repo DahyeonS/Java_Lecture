@@ -44,3 +44,5 @@
 * ArrayTest.java
 
 * DiceTest.java
+
+* DiceTest.java
