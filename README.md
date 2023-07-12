@@ -45,8 +45,8 @@
 
 * DiceTest.java
 
-* PrefectNum.java
-
 * DiceTest2.java
 
 * DiceTest3.java
+
+* PrefectNum.java
