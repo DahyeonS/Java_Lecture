@@ -68,3 +68,5 @@
 * Lotto2.java
 
 * SelectionSort.java
+
+* Ranking.java
