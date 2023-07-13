@@ -64,3 +64,5 @@
 * Fibo2.java
 
 * Lotto.java
+
+* Lotto2.java
