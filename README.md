@@ -92,3 +92,5 @@
 * SosooTest.java
 
 * SoinsooTest.java
+
+* WeekdayTest.java
