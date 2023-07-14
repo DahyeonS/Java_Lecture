@@ -88,3 +88,5 @@
 * MenuTest.java
 
 * MenuTest2.java
+
+* SosooTest.java
