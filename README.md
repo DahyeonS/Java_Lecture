@@ -90,3 +90,5 @@
 * MenuTest2.java
 
 * SosooTest.java
+
+* SoinsooTest.java
