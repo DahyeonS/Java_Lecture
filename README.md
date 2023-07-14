@@ -82,3 +82,5 @@
 * EuclidTest.java
 
 * WhileTest.java
+
+* MenuTest.java
