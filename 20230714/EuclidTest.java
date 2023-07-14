@@ -27,7 +27,7 @@ public class EuclidTest {
 		System.out.println("큰 수: " + big + ", 작은 수: " + small);
 
 //		for를 이용한 무한 루프 => for(;;)
-		for (;;) {
+		for (;;) { // while(true) {
 			int r = big % small; // 큰 수를 작은 수로 나눈 나머지를 계산한다.
 			if (r == 0) {
 				break;
