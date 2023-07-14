@@ -80,3 +80,5 @@
 * BubbleSortEarlyStop.java
 
 * EuclidTest.java
+
+* WhileTest.java
