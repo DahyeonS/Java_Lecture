@@ -104,3 +104,5 @@
 * StringTest.java
 
 * StringMethodTest.java
+
+* JuminNoTest.java
