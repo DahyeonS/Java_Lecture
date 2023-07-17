@@ -26,7 +26,7 @@ public class DateTest2 {
 		System.out.println(sdf.format(date6));
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("년 월 일을 입력하세요: ");
+		System.out.print("년 월 일을 입력하세요: ");
 		int year = scanner.nextInt() - 1900;
 		int month = scanner.nextInt() - 1;
 		int day = scanner.nextInt();
