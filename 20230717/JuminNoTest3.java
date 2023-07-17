@@ -21,7 +21,7 @@ public class JuminNoTest3 {
 //		주민등록번호의 각 자리 숫자와 가중치를 곱한 합계를 11로 나눈 나머지를 11에서 뺀다.
 //		뺀 결과가 10 이상이면 10의 자리는 버리고 1의 자리만 취한다.
 		int result = (11 - sum % 11) % 10;
-		System.out.println(result);
+//		System.out.println(result);
 		
 //		주민등록번호 마지막 자리와 결과를 비교해서 같으면 정상, 그렇지 않으면 오류
 		if (result == jumin.charAt(jumin.length() - 1) - 48) { // if (result == jumin.charAt(12) - 48) {
