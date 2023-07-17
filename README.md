@@ -100,3 +100,5 @@
 * DateTest.java
 
 * DateTest2.java
+
+* StringTest.java
