@@ -1,3 +1,5 @@
+import java.util.Date;
+import java.util.Scanner;
 
 public class CalendarTest {
 //	메소드의 형식, [ ]로 묶여 있는 내용은 생략이 가능하다.
@@ -35,9 +37,81 @@ public class CalendarTest {
 	
 	public static void main(String[] args) {
 //		static 메소드는 static 메소드에만 접근할 수 있다.
-		System.out.println(isLeapYear(2020));
+//		System.out.println(isLeapYear(2020));
+//		System.out.println(lastDay(2023, 7));
+//		System.out.println(totalDay(2023, 7, 18));
+//		System.out.println(weekDay(2023, 7, 18));
 //		isLeapYear(2023);
 		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("이번달(1), 특정달(2): ");
+		int confirm = scanner.nextInt();
+		int year, month;
+		if(confirm == 1) {
+			Date date = new Date();
+			year = date.getYear() + 1900;
+			month = date.getMonth() + 1;
+		} else {
+			System.out.print("출력할 년, 월을 입력하세요: ");
+			year = scanner.nextInt();
+			month = scanner.nextInt();
+			
+		}
+		
+		System.out.printf("=============================\n");
+		System.out.printf("        %4d년 %2d월\n", year, month);
+		System.out.printf("=============================\n");
+		System.out.println(" 일  월  화  수  목  금  토 ");
+		System.out.printf("=============================\n");
+		
+//		1일의 출력될 위치를 맞추기 위해 1일의 요일만큼 반복하여 빈 칸(날짜당 4칸)을 출력한다.
+//		for (int i=1; i<=weekDay(year, month, 1); i++) {
+//			System.out.print("    ");
+//		}
+		
+//		1일이 출력될 위치를 맞추기 위해 1일의 요일만큼 반복하며 전달 날짜를 출력한다.
+		int week = weekDay(year, month, 1);
+		int start = 0;
+		if (month == 1) {
+//			start = lastDay(year - 1, 12) - week; // 1월
+			start = 31 - week;
+		} else {
+			start = lastDay(year, month - 1) - week; // 2 ~ 12월
+		}
+		for (int i=1; i<=week; i++) {
+			System.out.printf(" %2d ", ++start);
+		}
+		
+		
+//		1일부터 달력을 출력할 달의 마지막 날짜까지 반복하며 날짜를 출력한다.
+		for (int i=1; i<lastDay(year, month)+1; i++) {
+			System.out.printf(" %2d ", i);
+			if (weekDay(year, month, i) == 6 && i != lastDay(year, month)) {
+				System.out.println();
+			}
+		}
+		
+//		날짜를 다 출력해도 남은 빈칸에 다음 달 1일의 요일부터 토요일까지 반복해서 날짜를 출력한다.
+//		if (month == 12) {
+//			week = weekDay(year + 1, 1, 1); // 12dnjf
+//		} else {
+//			week = weekDay(year, month + 1, 1); // 1 ~ 11월
+//		}
+//		
+//		if (week != 0) {
+//			start = 0;
+//			for (int i=week; i<=6; i++) {
+//				System.out.printf(" %2d ", ++start);
+//			}
+//		}
+		week = weekDay(year, month, lastDay(year, month)) + 1;
+		start = 0;
+		for (int i=week; i<=6; i++) {
+			System.out.printf(" %2d ", ++start); // start = 1이면 start++
+		}
+		
+		System.out.printf("\n=============================\n");
 	}
 	
 //	년도를 인수로 넘겨 받아려 윤년, 평년을 판단해서 윤년이면 true, 평년이면 false를 리턴하는 메소드
@@ -55,5 +129,34 @@ public class CalendarTest {
 //		System.out.println(year % 4 == 0 && year % 100 != 0 || year % 400 == 0);
 //		
 //	}
+	
+//	년, 월, 일을 인수로 넘겨받아 1년 1얼 1일부터 지난 날짜를 계산해 리턴하는 메소드
+	public static int totalDay(int year, int month, int day) {
+		int sum = (year - 1) * 365 + (year - 1) / 4 - (year - 1) / 100 +
+				(year - 1) / 400;
+		
+		for (int i=1; i<month; i++) {
+			sum += lastDay(year, i);
+		}
+		sum += day;
+		
+		return sum;
+		
+	}
+
+	public static int lastDay(int year, int month) {
+		int [] m = {31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		m[1] = isLeapYear(year) ? 29 : 28;
+		
+		return m[month - 1];
+	}
+	
+//	년, 월, 일을 인수로 넘겨받아 요일 숫자로 계산해 리턴하는 메소드
+//	일요일(0), 월요일(1), 화요일(2), 수요일(3), 목요일(4), 금요일(5), 토요일(6)
+	public static int weekDay(int year, int month, int day) {
+		return totalDay(year, month, day) % 7;
+		
+	}
+	
 	
 }
