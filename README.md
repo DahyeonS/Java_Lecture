@@ -142,3 +142,5 @@
 * MagicSquareTest2.java
 
 * VarArgsMethodTest.java
+
+* ArrayTest.java
