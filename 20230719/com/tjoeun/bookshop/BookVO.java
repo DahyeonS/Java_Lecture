@@ -1,6 +1,7 @@
 package com.tjoeun.bookshop;
 
 import java.util.Date;
+import java.util.Objects;
 
 // 클래스는 객체를 정의해 놓은 것 => 설계도
 // 클래스에는 객체의 속성과 기능이 정의되어 있다.
@@ -118,6 +119,25 @@ public class BookVO {
 	public String toString() {
 		return "BookVO [title=" + title + ", author=" + author + ", publisher=" + publisher + ", writeDate=" + writeDate
 				+ ", price=" + price + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(author, price, publisher, title, writeDate);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BookVO other = (BookVO) obj;
+		return Objects.equals(author, other.author) && price == other.price
+				&& Objects.equals(publisher, other.publisher) && Objects.equals(title, other.title)
+				&& Objects.equals(writeDate, other.writeDate);
 	}
 	
 	
