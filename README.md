@@ -134,3 +134,9 @@
 ## 2023.7.19
 
 * BingoTest.java
+
+* BingoTest2.java
+
+* MagicSquareTest.java
+
+* MagicSquareTest2.java
