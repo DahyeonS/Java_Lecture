@@ -144,3 +144,5 @@
 * VarArgsMethodTest.java
 
 * ArrayTest.java
+
+* ArrayListMethodTest.java
