@@ -30,7 +30,7 @@ public class BookVO {
 	private String title; // 도서명
 	private String author; // 저자
 	private String publisher; // 출판사
-	private Date writerDate; // 출판인
+	private Date writeDate; // 출판인
 	private int price; // 가격
 	
 //	생성자를 선언한다.
@@ -45,5 +45,82 @@ public class BookVO {
 	public BookVO() {
 		System.out.println("기본 생성자가 실행됩니다.");
 	}
+
+	public BookVO(String title, String author, String publisher, 
+			Date writeDate, int price) {
+//		super()는 생략해도 자바 컴파일러가 자동으로 붙여준다.
+//		super(); // 부모 클래스의 기본 생성자를 호출한다.
+//		this(); // 현재 클래스의 기본 생성자를 호출한다.
+//		super()와 this()는 반드시 생성자의 첫 문장으로 적어야한다.
+//		=> 동시에 사용할 수 없다.
+//		super는 부모 클래스, this는 현재 클래스를 의미한다.
+		this.title = title;
+		this.author = author;
+		this.publisher = publisher;
+//		매개변수로 넘어온 writeDate에 저장된 날짜 데이터에서 년은 1900을 월은 1을 빼서 다시
+//		저장한다.
+		writeDate.setYear(writeDate.getYear() - 1900);
+		writeDate.setMonth(writeDate.getMonth() - 1);
+		this.writeDate = writeDate;
+		this.price = price;
+	}
+	
+	
+//	getters & setters 메소드를 선언한다.
+//	getters & setters 메소드는 private 권한으로 선언된 필드를 클래스 외부에서 접근할 수
+//	있도록 예외규정을 만든다.
+	public String getTitle() {
+		return title;
+	}
+	
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	public String getAuthor() {
+		return author;
+	}
+	
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+	public String getPublisher() {
+		return publisher;
+	}
+	
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+	
+	public Date getWriteDate() {
+		return writeDate;
+	}
+	
+	public void setWriteDate(Date writeDate) {
+		this.writeDate = writeDate;
+	}
+	
+	public int getPrice() {
+		return price;
+	}
+	
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+//	클래스 객체에 저장된 데이터를 보고 싶다면 toString() 메소드를 Override(재정의) 해야한다.
+//	@Override 어노테이션: 이 메소드가 부모 클래스에서 상속받은 메소드를 Override한 메소드
+//	임을 의미한다.
+//	@Override 어노테이션이 붙어있는 메소드는 메소드 이름을 수정해서 상속받은
+//	메소드 이름과 다르게 하면 에러를 발생시킨다.
+	@Override
+	public String toString() {
+		return "BookVO [title=" + title + ", author=" + author + ", publisher=" + publisher + ", writeDate=" + writeDate
+				+ ", price=" + price + "]";
+	}
+	
+	
+	
 
 }
