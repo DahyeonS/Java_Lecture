@@ -147,8 +147,8 @@
 
 * ArrayListMethodTest.java
 
-*com.tjoeun.bookshop*
+### *com.tjoeun.bookshop*
 
-    BookVO.java
+* BookVO.java
 
-    BookShopMain.java
+* BookShopMain.java
