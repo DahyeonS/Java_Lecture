@@ -77,8 +77,15 @@ public class BookShopMain {
 			System.out.println("다르다");
 		}
 		
+//		여러 권의 책 정보를 기억하는 클래스의 객체를 생성한다.
+		BookList bookList = new BookList();
+//		책 정보를 BookList 클래스의 bookList 배열에 저장하는 메소드를 실행한다.
+		bookList.addBook(book1);
+		bookList.addBook(book2);
+		bookList.addBook(book3);
+		bookList.addBook(book4);
 		
+		System.out.println(bookList);
 		
 	}
-
 }
