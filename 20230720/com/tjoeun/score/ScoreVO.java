@@ -108,8 +108,10 @@ public class ScoreVO {
 //	toString()
 	@Override
 	public String toString() {
-		return "ScoreVO [idx=" + idx + ", name=" + name + ", kor=" + kor + ", eng=" + eng + ", math=" + math
-				+ ", total=" + total + ", avg=" + avg + ", rank=" + rank + "]";
+//		return "ScoreVO [idx=" + idx + ", name=" + name + ", kor=" + kor + ", eng=" + eng + ", math=" + math
+//				+ ", total=" + total + ", avg=" + avg + ", rank=" + rank + "]";
+		return String.format(" %3d   %4s  %3d    %3d    %3d    %3d   %6.2f    %d", 
+				idx, name, kor, eng, math, total, avg, rank);
 	}
 	
 }
