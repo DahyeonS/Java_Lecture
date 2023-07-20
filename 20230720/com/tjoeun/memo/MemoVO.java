@@ -11,8 +11,8 @@ public class MemoVO {
 	public static int count; // 자동증가에 사용할 정적 필드
 	private int idx; // 메모번호 => 자동증가
 	private String name; // 작성자
-	private int password; // 비밀번호
-	private String meno; // 메모
+	private String password; // 비밀번호
+	private String memo; // 메모
 	private Date writeDate; // 작성일 => 컴퓨터 시스템의 날짜와 시간으로 자동 설정
 	
 //	생성자
@@ -20,13 +20,14 @@ public class MemoVO {
 		
 	}
 	
-	public MemoVO(String name, int password, String meno, Date writeDate) {
+//	public MemoVO(String name, String password, String memo, Date writeDate) {
+	public MemoVO(String name, String password, String memo) {
 		super();
 		idx = ++count;
 		this.name = name;
 		this.password = password;
-		this.meno = meno;
-		this.writeDate = writeDate;
+		this.memo = memo;
+		this.writeDate = new Date();
 	}
 
 	
@@ -47,20 +48,20 @@ public class MemoVO {
 		this.name = name;
 	}
 	
-	public int getPassword() {
+	public String getPassword() {
 		return password;
 	}
 	
-	public void setPassword(int password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 	
-	public String getMeno() {
-		return meno;
+	public String getMemo() {
+		return memo;
 	}
 	
-	public void setMeno(String meno) {
-		this.meno = meno;
+	public void setMemo(String memo) {
+		this.memo = memo;
 	}
 	
 	public Date getwriteDate() {
@@ -74,7 +75,7 @@ public class MemoVO {
 //	toString()
 	@Override
 	public String toString() {
-		return "MemoVO [idx=" + idx + ", name=" + name + ", password=" + password + ", meno=" + meno + ", writeDate=" + writeDate
+		return "MemoVO [idx=" + idx + ", name=" + name + ", password=" + password + ", memo=" + memo +", writeDate=" + writeDate
 				+ "]";
 	}
 	
