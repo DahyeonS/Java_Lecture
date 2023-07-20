@@ -12,7 +12,7 @@ public class BookShopMain {
 		BookVO vo = new BookVO();
 //		System.out.println(vo.title);
 //		=> vo 클래스의 필드들이 private으로 선언 => 외부 클래스에서 접근이 불가능하다.
-		System.out.println(vo);
+//		System.out.println(vo);
 		
 //		BookVO vo2 = new BookVO();
 //		System.out.println(vo2);
