@@ -160,3 +160,5 @@
 ### *com.tjoeun.score*
 
 * ScoreVO.java
+
+* ScoreMain.java
