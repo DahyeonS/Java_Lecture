@@ -174,3 +174,7 @@
 * TextFileRead.java
 
 * TextFileRead2.java
+
+### *com.tjoeun.textFileIO*
+
+* MemoVO.java
