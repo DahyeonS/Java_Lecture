@@ -170,3 +170,5 @@
 ### *com.tjoeun.textFileIO*
 
 * TextFileWriteTest.java
+
+* TextFileRead.java
