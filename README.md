@@ -156,3 +156,7 @@
 * BookList.java
 
 ## 2023.7.20
+
+### *com.tjoeun.score*
+
+* ScoreVO.java
