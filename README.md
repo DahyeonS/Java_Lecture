@@ -198,3 +198,5 @@
 * ParentTest.java
 
 * ChildTest.java
+
+* InheritanceTest.java
