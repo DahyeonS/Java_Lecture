@@ -175,7 +175,7 @@
 
 * TextFileRead2.java
 
-### *com.tjoeun.textFileIO*
+### *com.tjoeun.memo*
 
 * MemoVO.java
 
@@ -185,10 +185,16 @@
 
 ## 2023.7.21
 
-### *com.tjoeun.textFileIO*
+### *com.tjoeun.memo*
 
 * MemoVO.java
 
 * MemoMain.java
 
 * MemoList.java
+
+### *com.tjoeun.inheritance*
+
+* ParentTest.java
+
+* ChildTest.java
