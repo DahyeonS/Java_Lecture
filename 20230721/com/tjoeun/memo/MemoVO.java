@@ -28,11 +28,20 @@ public class MemoVO {
 		this.name = name;
 		this.password = password;
 		this.memo = memo;
-		this.writeDate = new Date();
+		writeDate = new Date();
 	}
 
 	
-//	getters & setters
+public MemoVO(int idx2, String name2, String password2, String memo2, Date writeDate2) {
+	super();
+	idx = ++count;
+	this.name = name;
+	this.password = password;
+	this.memo = memo;
+	this.writeDate = writeDate2;
+	}
+
+	//	getters & setters
 	public int getIdx() {
 		return idx;
 	}

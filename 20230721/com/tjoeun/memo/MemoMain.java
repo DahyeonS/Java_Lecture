@@ -43,7 +43,7 @@ public class MemoMain {
 			fileWrite();
 			break;
 		case 6:
-			System.out.println("파일에서 읽기");
+			fileRead();
 			break;
 			}
 		}
@@ -51,7 +51,22 @@ public class MemoMain {
 
 	}
 	
-//	키보드로 텍스트 파일 이름을 입력받아 MemoList 클래스의 memoList ArrayList에 저장된 데이터를
+//	키보드로 텍스트 파일 이름을 입력받아 텍스트 파일의 데이터를 읽어서 MemoList 클래스의 memoList
+//	ArrayList에 저장한다.
+	private static void fileRead() {
+		Scanner scanner = new Scanner(System.in);
+		
+//		텍스트 파일 이름을 입력받는다.
+		System.out.print("불러올 텍스트 파일 이름을 입력하세요. > ");
+		String fileName = scanner.nextLine().trim();
+//		텍스트 파일의 데이터를 읽어 MemoList 클래스의 memoList ArrayList에 저장된
+//		메소드를 호출한다.
+		memoList.readMemo(fileName);
+		
+		
+	}
+
+	//	키보드로 텍스트 파일 이름을 입력받아 MemoList 클래스의 memoList ArrayList에 저장된 데이터를
 //	텍스트 파일로 출력하는 메소드를 실행하는 메소드
 	private static void fileWrite() {
 		Scanner scanner = new Scanner(System.in);
