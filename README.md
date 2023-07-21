@@ -185,4 +185,10 @@
 
 ## 2023.7.21
 
+### *com.tjoeun.textFileIO*
 
+* MemoVO.java
+
+* MemoMain.java
+
+* MemoList.java
