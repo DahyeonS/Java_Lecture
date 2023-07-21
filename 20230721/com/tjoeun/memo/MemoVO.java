@@ -1,5 +1,6 @@
 package com.tjoeun.memo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 // 메모 1건을 기억하는 클래스
@@ -75,8 +76,13 @@ public class MemoVO {
 //	toString()
 	@Override
 	public String toString() {
-		return "MemoVO [idx=" + idx + ", name=" + name + ", password=" + password + ", memo=" + memo +", writeDate=" + writeDate
-				+ "]";
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd(E) HH:mm:ss");
+		
+//		idx - 날짜 / 시간 - 이름 - 메모
+		return String.format("%2d. %s %s %s", idx, sdf.format(writeDate), name, memo);
+//		return "번호 - " + idx + ", 작성날짜 - " + sdf.format(writeDate) + ", 이름 - " + name + ", 내용 - " + memo;
+//		return "MemoVO [idx=" + idx + ", name=" + name + ", password=" + password + ", memo=" + memo +", writeDate=" + writeDate
+//				+ "]";
 	}
 	
 	
