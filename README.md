@@ -147,56 +147,37 @@
 
 * ArrayListMethodTest.java
 
-### *com.tjoeun.bookshop*
-
-* BookVO.java
-
-* BookShopMain.java
-
-* BookList.java
+> ### *com.tjoeun.bookshop*
+> * BookVO.java
+> * BookShopMain.java
+> * BookList.java
 
 ## 2023.7.20
 
-### *com.tjoeun.score*
+> ### *com.tjoeun.score*
+> * ScoreVO.java
+> * ScoreMain1.java
+> * ScoreList.java
+> * ScoreMain.java
 
-* ScoreVO.java
+> ### *com.tjoeun.textFileIO*
+> * TextFileWriteTest.java
+> * TextFileRead.java
+> * TextFileRead2.java
 
-* ScoreMain1.java
-
-* ScoreList.java
-
-* ScoreMain.java
-
-### *com.tjoeun.textFileIO*
-
-* TextFileWriteTest.java
-
-* TextFileRead.java
-
-* TextFileRead2.java
-
-### *com.tjoeun.memo*
-
-* MemoVO.java
-
-* MemoMain.java
-
-* MemoList.java
+> ### *com.tjoeun.memo*
+> * MemoVO.java
+> * MemoMain.java
+> * MemoList.java
 
 ## 2023.7.21
 
-### *com.tjoeun.memo*
+> ### *com.tjoeun.memo*
+> * MemoVO.java
+> * MemoMain.java
+> * MemoList.java
 
-* MemoVO.java
-
-* MemoMain.java
-
-* MemoList.java
-
-### *com.tjoeun.inheritance*
-
-* ParentTest.java
-
-* ChildTest.java
-
-* InheritanceTest.java
+> ### *com.tjoeun.inheritance*
+> * ParentTest.java
+> * ChildTest.java
+> * InheritanceTest.java
